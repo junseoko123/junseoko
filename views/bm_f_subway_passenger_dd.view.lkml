@@ -74,24 +74,24 @@ view: bm_f_subway_passenger_dd {
 
 ###
   measure: get_aver {
-    type: average
-    label: "승차평균인원수"
+    type: sum
+    label: "총승차인원수"
     sql: ${TABLE}.get_cnt ;;
   }
   measure: get_off_aver {
-    label: "하차평균인원수"
-    type: average
+    label: "총하차인원수"
+    type: sum
     sql: ${TABLE}.get_off_cnt ;;
   }
   measure: moving_passenger_aver {
-    label: "유동평균인원수"
-    type: average
+    label: "총유동인원수"
+    type: sum
     sql: ${TABLE}.moving_passenger_cnt ;;
   }
   measure: sunsusong_aver {
-    label: "순수송평균인원수"
-    type: average
-    sql: ${TABLE}.sunsusong_cnt ;;
+    label: "총순수송인원수"
+    type: number
+    sql: abs(sum(${TABLE}.sunsusong_cnt)) ;;
   }
 
 }

@@ -76,7 +76,7 @@ view: bm_f_subway_passenger_dd {
   measure: get_aver {
     type: sum
     label: "총승차인원수"
-    sql: ${TABLE}.get_cnt ;;
+    sql: ${TABLE}.get_cnt/10000 ;;
   }
   measure: get_off_aver {
     label: "총하차인원수"

@@ -1,5 +1,5 @@
 view: bm_d_passenger_type_cd {
-  sql_table_name: `project_b_team.bm_d_passenger_type_cd`
+  sql_table_name: `mzcdsc-team-200716.project_b_team.bm_d_passenger_type_cd`
     ;;
 
   dimension: cd {

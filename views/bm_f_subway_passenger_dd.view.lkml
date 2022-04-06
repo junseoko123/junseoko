@@ -42,9 +42,9 @@ view: bm_f_subway_passenger_dd {
     sql: ${TABLE}.station_no ;;
   }
 
-  dimension: subway_line_cd {
-    type: number
-    sql: ${TABLE}.subway_line_cd ;;
+  dimension: subway_line_no_cd {
+    type: string
+    sql: ${TABLE}.subway_line_no_cd ;;
   }
 
   dimension: sunsusong_cnt {

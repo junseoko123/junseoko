@@ -28,6 +28,7 @@ explore: bm_f_subway_passenger_dd {
     type: left_outer
       sql_on:  ${bm_f_subway_passenger_dd.passenger_type_gb_cd}=${bm_d_passenger_type_cd.cd};;
       relationship: many_to_one
-      }}
+      }
+  }
 
 explore: bm_d_passenger_type_cd {}

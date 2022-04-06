@@ -42,9 +42,14 @@ view: bm_f_subway_passenger_dd {
     sql: ${TABLE}.station_no ;;
   }
 
-  dimension: subway_line_cd {
+  dimension: subway_line_no_cd {
+    type: string
+    sql: ${TABLE}.subway_line_no_cd ;;
+  }
+
+  dimension: string_to_num_dim {
     type: number
-    sql: ${TABLE}.subway_line_cd ;;
+    sql: CAST(${TABLE}.subway_line_no_cd as INTEGER);;
   }
 
   dimension: sunsusong_cnt {
@@ -104,13 +109,17 @@ view: bm_f_subway_passenger_dd {
               기간 : {% if _filters['dt_date']%}
                           {{_filters['dt_date']}}
                           {% else %} 전체 {% endif %}
-
+&nbsp;&nbsp;&nbsp;
+호선 : {% if _filters['string_to_num_dim']%}
+      {{_filters['string_to_num_dim']}}호선
+      {% else %} 전체 {% endif %}
 
       &nbsp;&nbsp;&nbsp;
       승객유형 : {% if _filters['bm_d_passenger_type_cd.passenger_type']%}
       {{_filters['bm_d_passenger_type_cd.passenger_type']}}
       {% else %} 전체 {% endif %}
       &nbsp;&nbsp;&nbsp;
+
       </p>;;
   }
 

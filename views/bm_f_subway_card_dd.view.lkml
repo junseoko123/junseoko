@@ -24,6 +24,10 @@ view: bm_f_subway_card_dd {
     value_format: "0.##"
   }
 
+
+
+
+
   measure: dynamic_filter_value{
     type: max
     sql: 1 ;;

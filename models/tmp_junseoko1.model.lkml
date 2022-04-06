@@ -4,8 +4,8 @@ connection: "tmp_junseoko"
 include: "/views/**/*.view"
 
 datagroup: tmp_junseoko1_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "24 hour"
 }
 
 persist_with: tmp_junseoko1_default_datagroup

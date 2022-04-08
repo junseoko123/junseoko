@@ -30,7 +30,10 @@ explore: bm_f_subway_passenger_dd {
       relationship: many_to_one
       }
   }
+explore: data_compare {}
 
 explore: bm_d_passenger_type_cd {}
 
 explore: bm_f_subway_data_compare {}
+
+explore: bw_subway_card_list {}

@@ -19,7 +19,7 @@ view: bm_f_subway_card_dd {
 
   measure: get_cnt {
     label: "총승차인원수 평균"
-    type: average
+    type: sum
     sql: ${TABLE}.get_cnt/10000;;
     value_format: "0.##"
   }
@@ -54,7 +54,7 @@ view: bm_f_subway_card_dd {
 
   measure: get_off_cnt {
     label: "총하차인원수 평균"
-    type: average
+    type: sum
     sql: ${TABLE}.get_off_cnt/10000;;
     value_format: "0.##"
   }

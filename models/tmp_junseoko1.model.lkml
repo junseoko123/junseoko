@@ -32,3 +32,5 @@ explore: bm_f_subway_passenger_dd {
   }
 
 explore: bm_d_passenger_type_cd {}
+
+explore: bm_f_subway_data_compare {}

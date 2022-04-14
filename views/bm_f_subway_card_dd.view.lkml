@@ -33,8 +33,8 @@ view: bm_f_subway_card_dd {
     sql: 1 ;;
     html: <p style =
               "color: #000000;
-              font-size:70%;
-              text-align:left">
+              font-size:30%;
+              text-align:center">
               기간 : {% if _filters['dt_date']%}
                           {{_filters['dt_date']}}
                           {% else %} 전체 {% endif %}
